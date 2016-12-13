@@ -1,2 +1,2 @@
-# vue-starter
+# Vue.JS Starter
 Vue.JS studies
