@@ -1,8 +1,8 @@
-# Curso de VueJS 2
+# Curso de Vue.js 2
 
 ## Descrição
 
-Neste curso você irá aprender os recursos do VueJS.
+Neste curso você irá aprender os recursos do Vue.js.
 
 Vue era uma biblioteca javascript, agora um framework, para o desenvolvimento de componentes reativos para interfaces web modernas (Reactive Components for Modern Web Interfaces).
 
@@ -10,7 +10,7 @@ Componentes em resumo são "pedaços de código" que contém marcação, estilo 
 
 Neste curso você será apresentado ao:
 
-* VueCli
+* Vue-cli
 * Bulma, como alternativa ao Bootstrap
 * VueRouter
 * Axios para fazer requisições HTTP
