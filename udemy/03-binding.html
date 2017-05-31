@@ -5,7 +5,9 @@
   <body>
 
     <div id="app">
-      {{ message }}
+      <span v-bind:title="message">
+        Deixe o mouse sobre mim por alguns segundos e veja meu título vinculado dinamicamente!!!
+      </span>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -13,7 +15,7 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'You loaded this page on ' + new Date()
+        message: 'Você carregou esta página em ' + new Date()
       }
     })
     </script>
