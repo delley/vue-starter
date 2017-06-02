@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div id="app">
+      <ul>
+        <li v-for="fruit in fruits"> {{ fruit.name }} </li>
+      </ul>
+      <input v-on:keyup.enter="say('Hello Enter!')">
+      <input @keyup.enter="say('Hello Enter com @keyup!')">
+
+      <button @click="say('Hello @click')">Adicionar Fruta</button>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+    var app = new Vue({
+        el: '#app'
+      , data: {
+        fruits: [
+            { name: 'Apple' }
+          , { name: 'Banana' }
+          , { name: 'Orange' }
+          , { name: 'Manga' }
+        ]
+      }
+      , methods: {
+        say: function (msg) {
+          alert(msg)
+        }
+      }
+    })
+    </script>
+  </body>
+</html>

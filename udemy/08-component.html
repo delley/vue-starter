@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div id="app">
+      <ol>
+        <todo-list v-for="item in groceryList" v-bind:todo="item"></todo-list>
+      </ol>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+    Vue.component('todo-list',{
+        props: ['todo']
+      , template: '<li>{{ todo.text }}</li>'
+    })
+
+    var app = new Vue({
+        el: '#app'
+      , data: {
+        groceryList: [
+            { text: 'Vegetable' }
+          , { text: 'Cheese' }
+          , { text: 'Whatever else humans are supposed to eat' }
+        ]
+      }
+    })
+    </script>
+  </body>
+</html>
