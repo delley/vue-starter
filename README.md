@@ -8,6 +8,7 @@ Vue é um **framework progressivo** para a construção de interfaces de usuári
 
 ## References
 - [https://br.vuejs.org/](https://br.vuejs.org/)
+- [Vuejs tips - Cheat Sheet](https://vuejs-tips.github.io/cheatsheet)
 - [egghead.io - Develop Web Apps with Vue.js](https://egghead.io/courses/develop-web-apps-with-vue-js)
 - [Awesome Vue.js - A curated list of awesome things related to Vue.js](https://github.com/vuejs/awesome-vue)
 - [Webschool.io - Curso Vue.js 2.x](https://github.com/Webschool-io/vuejs-2-na-pratica)
@@ -17,3 +18,4 @@ Vue é um **framework progressivo** para a construção de interfaces de usuári
 - [Vue.js Brasil - CRUD básico com Vue.js e json-server #4](http://www.vuejs-brasil.com.br/crud-basico-com-vue-js-e-json-server-4/)
 - [Vue.js Brasil - CRUD básico com Vue.js e json-server #5](http://www.vuejs-brasil.com.br/crud-basico-com-vue-js-e-json-server-5/)
 - [Vue.js Brasil - CRUD básico com Vue.js e json-server #6](http://www.vuejs-brasil.com.br/crud-basico-com-vue-js-e-json-server-6/)
+- [Vegibit - Vue.js Tutorial](http://vegibit.com/vue-js-tutorial/)
