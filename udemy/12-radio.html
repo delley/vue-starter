@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div id="app">
+      <input type="radio" id="jack" value="Jack" v-model="checkedNames">
+      <label for="jack">Jack</label>
+
+      <input type="radio" id="john" value="John" v-model="checkedNames">
+      <label for="jack">John</label>
+
+      <input type="radio" id="mike" value="Mike" v-model="checkedNames">
+      <label for="jack">Mike</label>
+      <br />
+      <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+
+    var app = new Vue({
+        el: '#app'
+      , data: { checkedNames: [] }
+    })
+    </script>
+  </body>
+</html>
