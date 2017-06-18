@@ -1,13 +1,44 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css" media="screen,projection"/>
   </head>
   <body>
 
     <div id="app">
-      <h1 v-if="name == ''">Olá Mundo</h1>
-      <h1 v-if="name == 'Oliveira'">Olá Sr. {{ name }}</h1>
-      <h1 v-else>Olá {{ name }}</h1>
+      <div class="row">
+        <div class="col s12 m4">
+          <input type="text" placeholder="Add a task" v-model="inputTask">
+          <button class="btn waves-effect waves-light" v-on:click="addTasks">Add</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m4">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Task Name</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="task in tasks">
+                <td>
+                  <div class="col s11 m10">
+                    {{ task.name }}
+                  </div>
+                </td>
+                <td>
+                  <div class="col s1 m2">
+                    <button type="button" class="btn waves-effect waves-light red" v-on:click="removeTask(task.id)">X</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
@@ -29,8 +60,15 @@
             this.tasks.push({ name: this.inputTask, id: this.tasks.length + 1 });
             this.inputTask = '';
           }
+        },
+        removeTask(id) {
+          for (var i = this.tasks.length; i--;) {
+            if (this.tasks[i].id === id) {
+              this.tasks.splice(i, 1);
+            }
+          }
         }
-      , 
+      ,
     }
     })
     </script>
