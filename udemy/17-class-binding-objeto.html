@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css" media="screen">
+      .color-blue {
+        color: blue;
+      }
+      .color-red {
+        color: red;
+      }
+
+      .is-loading {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1 :class="className">Exemplo Class Bindig</h1>
+      <h2 :class="{'is-loading': isLoading, 'color-blue': isBlue}" @click="toggleClass">Class Binding {'is-loading': {{ isLoading }}}</h2>
+      <h2 :class="classObject">Class Binding Computed</h2>
+      <button type="button" title="Título do botão 01">Para o mouse sobre o botão</button>
+      <button type="button" title="Título do botão 02">Para o mouse sobre o botão</button>
+      <button type="button" v-bind:title="titulo">Para o mouse sobre o botão</button>
+      <button type="button" :title="titulo">Para o mouse sobre o botão</button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        titulo: "Título modificado pelo Vue.js",
+        className: 'color-blue',
+        isLoading: true,
+        isBlue: true,
+      },
+      computed: {
+        classObject: function () {
+          return {
+            'is-loading': true,
+            'color-blue': this.isBlue
+          }
+        }
+      },
+      methods: {
+        toggleClass() {
+          this.isLoading = !this.isLoading;
+          this.isBlue = !this.isBlue;
+        }
+      }
+    })
+    </script>
+  </body>
+</html>
