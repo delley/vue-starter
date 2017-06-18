@@ -1,4 +1,4 @@
-# Curso de Vue.js 2
+# Curso de Vue.js 2 - Udemy
 
 ## Descrição
 
@@ -17,3 +17,7 @@ Neste curso você será apresentado ao:
 * Vue Material Design, que te oferece componentes reutilizáveis
 * Vuetify, que também te oferece componentes reutilizáveis
 * Vuex, como a implementação oficial da arquitetura Flux
+
+## Link
+
+* [https://www.udemy.com/curso-vuejs/learn/v4/overview](https://www.udemy.com/curso-vuejs/learn/v4/overview)
