@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div id="app">
+      {{ mensagem }}
+
+      <div v-once>{{ mensagem }}</div>
+
+      <div v-html="conteudoEmHtml"></div>
+      <div v-text="conteudoEmHtml"></div>
+
+      <div v-bind:id="dynamicId">Div Dinamico</div>
+      <button type="button" v-bind:disabled="expressaoBoolana">Botão</button>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        mensagem: 'Olá',
+        conteudoEmHtml: '<b>Vue.js</b>',
+        dynamicId: 'divDinamico',
+        expressaoBoolana: true
+      },
+      computed: {
+      },
+      methods: {
+      }
+    })
+    </script>
+  </body>
+</html>
