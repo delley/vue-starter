@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css" media="screen">
+      .color-blue {
+        color: blue;
+      }
+      .color-red {
+        color: red;
+      }
+      .color-white {
+        color: white;
+      }
+      .back-green {
+        background: green;
+      }
+      .is-loading {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1 :class="className">Exemplo Class Bindig</h1>
+      <h2 :class="{'is-loading': isLoading, 'color-white': isWhite}" @click="toggleClass">Class Binding {'is-loading': {{ isLoading }}}</h2>
+      <h2 :class="classObject">Class Binding Computed</h2>
+      <h2 :class="[classWhite, classBackGreen]">Class Binding Array</h2>
+      <h2 :style="{color: azul, fontSize: 20 + 'px'}">Binding Style Inline</h2>
+      <h2 :style="classStyle">Binding Style object Inline</h2>
+
+      <button type="button" title="Título do botão 01">Para o mouse sobre o botão</button>
+      <button type="button" title="Título do botão 02">Para o mouse sobre o botão</button>
+      <button type="button" v-bind:title="titulo">Para o mouse sobre o botão</button>
+      <button type="button" :title="titulo">Para o mouse sobre o botão</button>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+    var app = new Vue({
+      el: "#app",
+      data: {
+        titulo: "Título modificado pelo Vue.js",
+        className: 'color-blue',
+        classBackGreen: 'back-green',
+        classWhite: 'color-white',
+        isLoading: true,
+        isBlue: true,
+        isWhite: true,
+        azul: 'blue',
+        classStyle: {
+          color: 'green',
+          fontSize: '30px'
+        }
+      },
+      computed: {
+        classObject: function () {
+          return {
+            'is-loading': true,
+            'color-white': this.isWhite
+          }
+        }
+      },
+      methods: {
+        toggleClass() {
+          this.isLoading = !this.isLoading;
+          this.isWhite = !this.isWhite;
+        }
+      }
+    })
+    </script>
+  </body>
+</html>
